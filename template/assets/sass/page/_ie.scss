@@ -1,0 +1,84 @@
+.use-ie{
+  //about-value
+  .about-value{
+    .heading_primary{
+      @include mqNotSP{
+        letter-spacing: 0;
+      }
+    }
+  }
+  
+  //journeySingle
+  .journeySingle-kv{
+    @include mqNotSP{
+      display: block;
+    }
+    .heading_primary{
+      @include mqNotSP{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 50%;
+      }
+    }
+  }
+  
+  //center
+  .center{
+//    height: 120px;
+    @include mqNotSP{
+      svg{
+
+      }
+    }
+  }
+  
+  .is-active{
+    .center{
+      @include mqNotSP{
+        margin-top: -18px;
+      }
+    }
+  }
+  
+  //right
+  .right-items{
+    @include mqNotSP{
+      li{
+        &:first-child {
+          a{
+            &::after {
+              max-width: 46px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a{
+            &::after {
+              max-width: 42px;
+            }
+          }
+        }
+        &:last-child {
+          a{
+            &::after {
+              max-width: 65px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .js-gnav-scroll.is-active{
+    a{
+      &:hover {
+        &::after {
+          content: "";
+          bottom: -3px;
+        }
+      }
+    }
+  }
+  
+}

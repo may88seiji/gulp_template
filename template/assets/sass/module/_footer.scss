@@ -1,0 +1,333 @@
+.footer-inner{
+  position: relative;
+  width: 1000px;
+  height: 175px;
+  margin: 0 auto;
+  @include mqSP{
+    //    width: 75%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 47px;
+    height: inherit;
+  }
+
+  .footer_en &{
+    text-align: center;
+    @include mqNotSP{
+      height: 160px;
+    }
+    @include mqSP{
+
+    }
+  }
+}
+
+.footer-logo{
+  margin-bottom: 24px;
+  @include mqSP{
+    margin-bottom: 12px;
+  }
+  svg,img{
+    fill: $c_w;
+    width: 148px;
+    @include mqSP{
+      width: 44%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .footer_en &{
+    @include mqNotSP{
+      margin-bottom: -4px;
+    }
+    @include mqSP{
+
+    }
+    svg{
+      @include mqNotSP{
+        width: 248px;
+      }
+      @include mqSP{
+
+      }
+    }
+  }
+}
+
+.footer-sns{
+  color: $c_w;
+  @include mqSP{
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  h3{
+    display: inline-block;
+    margin-right: 4px;
+    @include mqNotSP{
+      font-size: 11px;
+      font-weight: 600;
+    }
+    @include mqSP{
+      font-size: 10px;
+    }
+  }
+  ul{
+    display: inline-block;
+  }
+  .footer-sns-list{
+    @include mqSP{
+      position: relative;
+    }
+    i{
+      @include mqNotSP{
+        font-size: 18px;
+      }
+      @include mqSP{
+        font-size: 15px;
+        position: absolute;
+        top: -13px;
+      }
+    }
+  }
+}
+
+.footer-nav{
+  position: absolute;
+  right: 0;
+  top:0;
+  color: $c_w;
+  float: right;
+  @include mqSP{
+    position: inherit;
+    float: inherit;
+  }
+  > .footer-nav-content{
+    margin-left: 60px;
+    @include mqSP{
+      margin-left: inherit;
+      margin-bottom: 8px;
+    }
+    li > ul{
+      //Products & Services sp-hide
+      font-size: 12px;
+      margin-top: 10px;
+      > li{
+        font-weight: normal;
+        @include mqNotSP{
+          margin-bottom: 7px;
+          color: $c_w3;
+        }
+        @include mqSP{
+
+        }
+      }
+    }
+  }
+  .footer-nav-list{
+    display: inline-block;
+    font-weight: 600;
+    @include mqNotSP{
+      font-size: 14px;
+      margin-right: 60px;
+      float: left;
+    }
+    @include mqSP{
+      float: inherit;
+      //      display: block;
+      //      text-align: center;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    > li{
+      margin-bottom: 15px;
+      @include mqNotSP{
+        > span{
+          opacity: .8;
+        }
+      }
+      @include mqSP{
+        display: inline-block;
+        margin: 0 8px;
+      }
+      &:not(:last-child) {
+        @include mqSP{
+          margin-bottom: 14px;
+        }
+      }
+    }
+    &:nth-of-type(1) {
+      @include mqSP{
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      @include mqSP{
+        margin-bottom: 24px;
+        margin-right: 18px;
+      }
+    }
+  }
+
+  .footer-nav-secondary{
+    display: inline-block;
+    padding-left: 60px;
+    position: relative;
+    @include mqNotSP{
+      font-size: 12px;
+    }
+    @include mqSP{
+      display: block;
+      padding-left: inherit;
+      text-align: center;
+      padding-top: 23px;
+      margin-bottom: 21px;
+    }
+    li{
+      margin-bottom: 7px;
+      color: $c_w3;
+      @include mqSP{
+        font-size: 11px;
+        display: inline-block;
+        margin-bottom: 8px;
+        &:nth-child(odd) {
+          margin-right: 4px;
+        }
+        &:nth-child(even) {
+          margin-left: 4px;
+        }
+        &:last-child {
+          margin-right: inherit;
+          margin-left: 4px;
+        }
+      }
+    }
+    @include mqNotSP{
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 134px;
+        display: block;
+        border-left: 1px solid $c_w2;
+      }
+    }
+    @include mqSP{
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: block;
+        border-top: 2px solid $c_w2;
+      }
+    }
+  }
+}
+
+.footer-copyright{
+  color: $c_w2;
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+  @include mqNotSP{
+    font-size: 10px;
+  }
+  @include mqSP{
+    position: inherit;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .footer_en &{
+    text-align: center;
+    right: 0;
+    left: 0;
+    @include mqNotSP{
+
+    }
+    @include mqSP{
+
+    }
+  }
+}
+
+.footer-pageTop{
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  @include mqNotSP{
+    transition: $tr_speed;
+    &:hover {
+      background-color: $c_pageTop;
+    }
+    &:hover > img {
+      margin-bottom: 10px; 
+    }
+  }
+  @include mqSP{
+    height: 40px;
+    background-color: $c_pageTop;
+    margin-top: 35px;
+  }
+
+  img{
+    width: 14px;
+    display: block;
+    transition: $tr_speed;
+    @include mqSP{
+      width: 12px;
+    }
+  }
+
+  .footer_en &{
+    @include mqNotSP{
+      margin-top: 50px;
+    }
+    @include mqSP{
+
+    }
+  }
+}
+
+.footer-nav-content{
+  @include mqNotSP{
+    float: left;
+  }
+  @include mqSP{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* ----------------------------
+* hover
+* -------------------------- */
+.footer-nav-list a,
+.icon-fb{
+  opacity: .8;
+  transition: $tr_speed;
+  &:hover {
+    opacity: $tr_opacity_ft;
+  }
+}
+
+.footer-nav-sub-list-item,
+.footer-nav-secondary a{
+  opacity: .5;
+  transition: $tr_speed;
+  &:hover {
+    opacity: $tr_opacity;
+  }
+}
